@@ -1,0 +1,16 @@
+.card-action{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-image,
+.material-icons,
+.card-address{
+    cursor: pointer;
+}
+
+.modal-footer button:focus{
+    background-color: rgba(239, 239, 239);
+    border: 1px outset rgba(118, 118, 118);
+    border-radius: 5px;
+}

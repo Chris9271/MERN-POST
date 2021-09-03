@@ -1,0 +1,31 @@
+.form-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title{
+    text-align: center;
+}
+
+.switch-area{
+    padding-top: 1.5rem !important;
+    text-align: center;
+}
+
+.switchMode{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: transparent !important;
+    padding: 0.5rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.switchMode:hover{
+    color: white;
+    background-color: black !important;
+}
+
+.helper-text{
+    color: red !important;
+}

@@ -1,0 +1,24 @@
+nav ul li{
+    float: none;
+}
+
+.container{
+    margin-top: 7px;
+}
+
+.nav-btn{
+    background-color: transparent;
+    border: none;
+    color: rgba(157, 157, 157);
+    padding: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-btn:hover{
+    color: white;
+}
+
+.nav-btn:visited{
+    color: white;
+}
