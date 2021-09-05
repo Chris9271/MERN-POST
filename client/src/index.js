@@ -23,7 +23,6 @@ const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 // returns persistor object
 const store = createStore(persistedReducer)
-
 const persistor = persistStore(store)
 
 // persist user login or signup keep the state, even though refresh page

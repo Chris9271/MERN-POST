@@ -8,13 +8,15 @@ const HttpError = require('./util/httpError'); // custom error handler
 const PORT = process.env.PORT || 5000;
 const app = express(); // create express app
 
-app.use(cors());
 // telling express to parse the body as JSON on every request
 app.use(express.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(cors());
+app.use(cors());
 
 // run router middleware on homepage path
-app.use('/', postRouter);
-app.use('/', userRouter);
+app.use(postRouter);
+app.use(userRouter);
 
 // catch wrong route and throw error
 app.use((req, res, next) => {

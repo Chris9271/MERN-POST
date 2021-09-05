@@ -48,7 +48,7 @@ const NavBar = () => {
                             !isLogin && isLoginMode ? 
                             <NavLink to="/login"><span className="glyphicon glyphicon-user"></span> SignUp</NavLink>
                             :
-                            <button onClick={handleLogOut} className="nav-btn"><span className="glyphicon glyphicon-log-out"></span> SignOut</button>
+                            <button onClick={handleLogOut} className="nav-btn"><span className="glyphicon glyphicon-log-out"></span>&nbsp;SignOut</button>
                             }
                         </li>
                     </ul>

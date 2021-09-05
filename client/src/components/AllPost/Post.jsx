@@ -89,7 +89,7 @@ const Posts = (props) => {
             <img src={postVal.imageUrl} alt={postVal.title}/>
         </Modal>
         <div className="outside-wrapper">
-            <div className="col s6 offset-s3">
+            <div className="col s12 m8 offset-m2">
                 <div className="card">
                     <div className="card-image" onClick={handlePicModalOpen}>
                         <img src={props.data.imageUrl} alt={props.data.title}/>

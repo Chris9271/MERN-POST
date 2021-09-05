@@ -13,7 +13,6 @@ exports.addUser = async(req, res, next) => {
 // if there is an error occur, will show the error location, param, and value
     //     return res.json({errors: errors.array()})
     // }
-
     const {username, email, password} = req.body;
     let userExist;
     let hashPassword;
@@ -21,6 +20,7 @@ exports.addUser = async(req, res, next) => {
     try{
         userExist = await UserSchema.findOne({email});
         if(userExist){
+            res.redirect('/sign');
             return next(new HttpError(422, "This email address already exist."))
         }
         // help to store password safely
@@ -51,9 +51,9 @@ exports.userLogin = async(req, res, next) => {
         console.log(findUser)
         matchPassword = await bcrypt.compare(password, findUser.password)
         if(!matchPassword){
+            res.redirect('/login');
             return next(new HttpError(500, "Password is incorrect, please try again."))
         }
-        console.log(matchPassword)
     }catch(err){
         console.log(err)
         return next(new HttpError(500, "Login failed, please try again..."))

@@ -34,7 +34,7 @@ const EditPost = ({data, close}) => {
         const [field, meta] = useField(props);
         if(props.name !== "description"){
         return(
-            <div className="input-field col s8 offset-s2">
+            <div className="input-field col s12 m8 offset-m2">
                 <input {...field}{...props} required/>
                 <label htmlFor={props.name} className="active">{label}</label>
                 {meta.touched && meta.error ? 
@@ -43,7 +43,7 @@ const EditPost = ({data, close}) => {
             </div>
         )}else{
             return(
-                <div className="input-field col s8 offset-s2">
+                <div className="input-field col s12 m8 offset-m2">
                     <textarea {...field}{...props} required/>
                     <label htmlFor={props.name} className="active">{label}</label>
                     {meta.touched && meta.error ? 
@@ -90,7 +90,7 @@ const EditPost = ({data, close}) => {
                             type="text"
                             className="materialize-textarea"
                         />
-                        <div className="col s8 offset-s2">
+                        <div className="col s12 m8 offset-m2">
                             {/* isSubmitting按下Submit轉為true,後被setSubmitting設為false */}
                             <button 
                                 type="submit"

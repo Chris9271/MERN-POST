@@ -11,6 +11,7 @@ const router = express.Router();
 //     // check password length a least 8, if not show withMessage content
 //     check('password').isLength({min: 8}).withMessage("Please check password length"),
 // ], userController.addUser);
+
 router.post('/sign', userController.addUser);
 router.post('/login', userController.userLogin);
 

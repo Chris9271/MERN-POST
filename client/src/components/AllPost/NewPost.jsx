@@ -37,7 +37,7 @@ const NewPost = () => {
         // console.log(props)
         if(props.name !== "description"){
         return(
-            <div className="input-field col s8 offset-s2">
+            <div className="input-field col s12 m8 offset-m2">
                 <input {...field}{...props}/>
                 <label htmlFor={props.name}>{label}</label>
                 {meta.touched && meta.error ? 
@@ -46,7 +46,7 @@ const NewPost = () => {
             </div>
         )}else{
             return(
-                <div className="input-field col s8 offset-s2">
+                <div className="input-field col s12 m8 offset-m2">
                     <textarea {...field}{...props}/>
                     <label htmlFor={props.name}>{label}</label>
                     {meta.touched && meta.error ? 
@@ -100,7 +100,7 @@ const NewPost = () => {
                             type="text"
                             className="materialize-textarea"
                         />
-                        <div className="col s8 offset-s2">
+                        <div className="col s12 m8 offset-m2">
                             {/* isSubmitting按下Submit轉為true,後被setSubmitting設為false */}
                             <button 
                                 type="submit"

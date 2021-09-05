@@ -14,3 +14,13 @@
     border: 1px outset rgba(118, 118, 118);
     border-radius: 5px;
 }
+
+@media screen and (max-width: 320px){
+    .card .card-title{
+        font-size: 18px;
+    }
+
+    .card .card-action{
+        padding: 16px 5px;
+    }
+}

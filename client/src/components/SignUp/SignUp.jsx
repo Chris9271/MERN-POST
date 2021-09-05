@@ -58,7 +58,7 @@ const SignUp = () => {
     const CustomInput = ({label, ...props}) => {
         const [field, meta] = useField(props);
         return(
-                <div className="input-field col s8 offset-s2">
+                <div className="input-field col s12 m8 offset-m2">
                     <input {...field}{...props}/>
                     <label htmlFor={props.name}>{label}</label>
                     {meta.touched && meta.error ? 
@@ -91,7 +91,7 @@ const SignUp = () => {
             {(props) => {
                 return(
                     <div className="row">
-                        <div className="form-wrapper input-field col s8 offset-s2">
+                        <div className="form-wrapper input-field col s12 m8 offset-m2">
                         <Form>
                             {!isLoginMode ? 
                                 <CustomInput 
@@ -117,7 +117,7 @@ const SignUp = () => {
                                     name="confirmPassword"
                                 /> 
                             : null}
-                            <div className="col s8 offset-s2">
+                            <div className="col s12 m8 offset-m2">
                                 <button 
                                     type="submit"
                                     className="waves-effect waves-light btn"
