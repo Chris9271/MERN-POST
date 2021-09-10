@@ -25,6 +25,7 @@ const App = () => {
             :
             <Redirect to="/"/>
             }
+            <Redirect to="/"/>
         </Switch>
       </BrowserRouter>
   );

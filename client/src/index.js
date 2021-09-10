@@ -22,6 +22,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, rootReducer)
 
 // returns persistor object
+// const store = createStore(rootReducer)
 const store = createStore(persistedReducer)
 const persistor = persistStore(store)
 

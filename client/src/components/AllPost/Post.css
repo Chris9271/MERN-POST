@@ -15,6 +15,16 @@
     border-radius: 5px;
 }
 
+.image-size{
+    height: 50vh;
+}
+
+@media screen and (max-width: 830px){
+    .image-size{
+        height: 100%;
+    }
+}
+
 @media screen and (max-width: 320px){
     .card .card-title{
         font-size: 18px;

@@ -5,14 +5,40 @@ const cors = require('cors') // allow cross domain http request
 const postRouter = require('./routes/post-route');
 const userRouter = require('./routes/user-route');
 const HttpError = require('./util/httpError'); // custom error handler
+// const session = require('express-session');
+// const MongoDBStore = require('connect-mongodb-session')(session);
+// const csrf = require('csurf');
 const PORT = process.env.PORT || 5000;
+// const store = new MongoDBStore({
+//     uri: process.env.MONGODB_URL,
+//     collection: 'session'
+// })
+// const csrfProtection = csrf();
 const app = express(); // create express app
 
 // telling express to parse the body as JSON on every request
 app.use(express.json());
 // app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(cors());
 app.use(cors());
+// app.use(express.static(path.join(__dirname, 'public')));
+// app.use(session({
+//     secret: 'auth',
+//     resave: false,
+//     saveUninitialized: false,
+//     store: store
+//     // cookie:{
+//     //     path: '/',
+//     //     maxAge: 1000 * 60 * 3
+//     // }
+// }))
+
+// app.use(csrfProtection);
+
+// app.use((req, res, next) => {
+//     console.log(req.session)
+//     res.locals.csrfToken = req.csrfToken();
+//     next()
+// })
 
 // run router middleware on homepage path
 app.use(postRouter);

@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from 'react';
+import {useSelector} from 'react-redux';
 import axios from 'axios';
 import Post from './Post';
 
 const Posts = () => {
+    const {userId} = useSelector(state => state)
     const [data, setData] = useState([]);
     useEffect(() => {
         try{
@@ -14,7 +16,7 @@ const Posts = () => {
         }catch(err){
             console.log(err)
         }
-    }, [])
+    }, [userId])
     return (
         <div className="row center">
             {data.map((singleData)=>(

@@ -24,6 +24,11 @@ const rootReducer = (state = initState, action) => {
                 ...state,
                 isLoginMode: !state.isLoginMode
             }
+        case "DELETE":
+            return {
+                ...state,
+                userId: action.payload
+            }
         default:
             return state
     }

@@ -46,11 +46,12 @@ exports.deletePost = async(req, res, next) => {
     let deletePost;
     try{
         deletePost = await PostSchema.findByIdAndDelete(id);
+        res.json(deletePost);
     }catch(err){
         console.log(err);
         return next(new HttpError(500, "Delete post failed!"))
     }
-    res.json(deletePost);
+    // res.json(deletePost);
 }
 
 exports.editPost = async(req, res, next) => {

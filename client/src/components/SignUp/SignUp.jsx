@@ -7,8 +7,6 @@ import {useSelector, useDispatch} from 'react-redux';
 import './SignUp.css';
 
 const SignUp = () => {
-    // const [isLoginMode, setIsLoginMode] = useState(false);
-
     // useSelector can extract data from redux store state
     const {isLogin, isLoginMode} = useSelector(state => state);
     // useDispatch return the reference to dispatch function from redux store
